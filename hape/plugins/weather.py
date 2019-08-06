@@ -1,6 +1,6 @@
 from nonebot import on_command, CommandSession
 
-@on_command('weather', aliases = ('天气'))
+@on_command('weather', aliases = ('天气', '天气查询', ))
 async def weather(session: CommandSession):
 	city = session.get('city', prompt = '你把你城市给👴交了')
 	weather_report = await get_weather_of_city(city)
